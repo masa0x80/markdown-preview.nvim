@@ -207,6 +207,12 @@ export default class PreviewPage extends React.Component {
           ...DEFAULT_OPTIONS.uml,
           ...uml
         })
+        .use(blockUml, {
+          ...DEFAULT_OPTIONS.uml,
+          ...uml,
+          openMarker: '@startgantt',
+          closeMarker: '@endgantt',
+        })
         .use(codeUml, {
           ...DEFAULT_OPTIONS.uml,
           ...uml
